@@ -1,0 +1,4 @@
+D:\Epam\biginteger\biginteger\bin\Debug\biginteger.exe
+D:\Epam\biginteger\biginteger\bin\Debug\biginteger.pdb
+D:\Epam\biginteger\biginteger\obj\x86\Debug\biginteger.exe
+D:\Epam\biginteger\biginteger\obj\x86\Debug\biginteger.pdb
