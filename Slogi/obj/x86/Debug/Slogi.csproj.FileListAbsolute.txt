@@ -1,0 +1,4 @@
+D:\Epam\Slogi\Slogi\bin\Debug\Slogi.exe
+D:\Epam\Slogi\Slogi\bin\Debug\Slogi.pdb
+D:\Epam\Slogi\Slogi\obj\x86\Debug\Slogi.exe
+D:\Epam\Slogi\Slogi\obj\x86\Debug\Slogi.pdb
