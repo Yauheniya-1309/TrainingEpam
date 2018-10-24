@@ -1,0 +1,4 @@
+D:\Epam\HuffmanTest\HuffmanTest\bin\Debug\HuffmanTest.exe
+D:\Epam\HuffmanTest\HuffmanTest\bin\Debug\HuffmanTest.pdb
+D:\Epam\HuffmanTest\HuffmanTest\obj\x86\Debug\HuffmanTest.exe
+D:\Epam\HuffmanTest\HuffmanTest\obj\x86\Debug\HuffmanTest.pdb
