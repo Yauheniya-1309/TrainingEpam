@@ -1,0 +1,4 @@
+D:\Epam\Tas11_FireStation\Tas11_FireStation\bin\Debug\Tas11_FireStation.exe
+D:\Epam\Tas11_FireStation\Tas11_FireStation\bin\Debug\Tas11_FireStation.pdb
+D:\Epam\Tas11_FireStation\Tas11_FireStation\obj\x86\Debug\Tas11_FireStation.exe
+D:\Epam\Tas11_FireStation\Tas11_FireStation\obj\x86\Debug\Tas11_FireStation.pdb
