@@ -1,0 +1,58 @@
+﻿
+@{
+    ViewBag.Title = "Home Page";
+}
+
+@model IEnumerable<WebApplication3.Models.Person>
+<br />
+<a href="/Home/CreatePerson/">ADD</a>
+<br />
+@using (Html.BeginForm())
+{
+    <p>
+        @Html.TextBox("SearchString")
+        <input type="submit" value="SEARCH" />
+        <a href="/Home/Index/ ">ALL USERS</a>
+    </p>
+}
+<table class="table table-striped table table-hover table-inverse">
+    <thead class="thead-inverse">
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Middle Name</th>
+            <th>Last Name</th>
+            <th>Age</th>
+            <th>e-mail</th>
+            <th>Phone Number</th>
+            <th>Password</th>
+            <th>Repeat password</th>
+            <th>Address</th>
+            <th> </th>
+            <th> </th>
+            <th> </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var temp in Model)
+        {
+        <tr>
+            <td>@temp.Id</td>
+            <td>@temp.Name</td>
+            <td>@temp.MiddleName</td>
+            <td>@temp.LastName</td>
+            <td>@temp.Age</td>
+            <td>@temp.EMail</td>
+            <td>@temp.PhoneNumber</td>
+            <td>@temp.Password</td>
+            <td>@temp.RepeatPassword</td>
+            <td>@temp.Address</td>
+            <td><a href="/Home/EditPerson/@temp.Id">Edit</a></td>
+            <td><a href="/Home/DeletePerson/@temp.Id">Delete</a></td>
+        </tr>
+
+        }
+    </tbody>
+</table>
+
+

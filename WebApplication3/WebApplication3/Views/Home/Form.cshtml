@@ -1,0 +1,158 @@
+﻿@model WebApplication3.Models.Person
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+@{string s = "";}
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+</head>
+<body>
+    <h1>@ViewBag.Title</h1>
+    <h1>@ViewBag.Message</h1>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    
+    
+    @using (Html.BeginForm()) 
+    {
+        @Html.AntiForgeryToken()
+        
+        <div class="form-horizontal">
+                             
+            <div class="form-group">
+                @Html.LabelFor(model => model.Name,"Name", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Name)
+                </div>
+            </div>
+    
+            <div class="form-group">
+                @Html.LabelFor(model => model.MiddleName,"Middle Name", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.MiddleName, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+            </div>
+    
+            <div class="form-group">
+                @Html.LabelFor(model => model.LastName,"Last Name", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.LastName)
+                </div>
+            </div>
+    
+            @if (ViewBag.able == true)
+            {
+               
+            <div class="form-group">
+                @Html.LabelFor(model => model.EMail, "e-Mail", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.EMail, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.EMail)
+                </div>
+            </div>
+            }
+            else
+            {  
+                <div class="form-group">
+                    @Html.LabelFor(model => model.EMail, "e-Mail", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.EMail, new { htmlAttributes = new { @readonly = "readonly" } })
+                        @Html.ValidationMessageFor(model => model.EMail)
+                    </div>
+                </div>
+            }
+            <div class="form-group">
+                @Html.LabelFor(model => model.PhoneNumber,"Phone Number", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.PhoneNumber, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.PhoneNumber)
+                </div>
+            </div>
+    
+            @if (ViewBag.able == true)
+            {
+            <div class="form-group">
+                @Html.LabelFor(model => model.Password, "Password", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Password)
+                </div>
+            </div>
+            }
+            else
+            {
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Password, "Password", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+
+                        @Html.EditorFor(model => model.Password, new {htmlAttributes = new { @readonly = "readonly" } })
+                        @Html.ValidationMessageFor(model => model.Password)
+                    </div>
+                </div>
+            }
+
+            @if (ViewBag.able == true)
+            {
+            <div class="form-group">
+                @Html.LabelFor(model => model.Password, "Repeat Password", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.RepeatPassword, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.RepeatPassword)
+                </div>
+            </div>
+            }
+            else
+            {
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Password, "Repeat Password", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.RepeatPassword, new { htmlAttributes = new { @readonly = "readonly" } })
+                        @Html.ValidationMessageFor(model => model.RepeatPassword)
+                    </div>
+                </div>
+            }
+
+
+
+          
+            <div class="form-group">
+                @Html.LabelFor(model => model.Age, "Age", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Age, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Age)
+                </div>
+            </div>
+            
+            <div class="form-group">
+                @Html.LabelFor(model => model.Address, "Address",htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.TextAreaFor(model => model.Address, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Address)
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+              
+                    <input type="submit" value=@ViewBag.verb class="btn btn-default" />
+
+                </div>
+            </div>
+        </div>
+    }
+    <br />
+    <div>
+        @if (ViewBag.able == true)
+        {
+        <a href="/Home/Index/" id="cancel" name="cancel" class="btn btn-default">Cancel</a>
+        }
+    </div>
+</body>
+</html>
